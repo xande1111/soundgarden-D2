@@ -1,20 +1,15 @@
-// test
-
-
 const URL = 'https://xp41-soundgarden-api.herokuapp.com/events'
 
 async function verEventos() {
-    try {
-        const response = await fetch(URL)
-        const listaEventos = await response.json()
+  try {
+    const response = await fetch(URL)
+    const listaEventos = await response.json()
 
-        listaEventos.forEach((evento, index) => {
-
-            let dataEvento = new Date(evento.scheduled).toLocaleString()
-            let atracoes = evento.attractions.toString()
-            let tbody = document.querySelector('#tbody')
-            // para os eventos da api mostrarem na pagina
-            let html = `
+    listaEventos.forEach((evento, index) => {
+      let dataEvento = new Date(evento.scheduled).toLocaleString()
+      let atracoes = evento.attractions.toString()
+      let tbody = document.querySelector('#tbody')
+      let html = `
 <tr>
   <th scope="row">${index + 1}</th>
   <td>${dataEvento}</td>
@@ -29,14 +24,12 @@ async function verEventos() {
   </td>
 </tr>
       `
+      tbody.innerHTML += html
+    })
 
-
-        })
-
-
-    } catch (erro) {
-
-    }
+    console.log(listaEventos)
+  } catch (error) {
+    console.log(error)
+  }
 }
-
 verEventos()

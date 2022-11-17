@@ -9,7 +9,6 @@ async function mostrarEventos() {
     const primeirosEventos = data.slice(0, 3)
 
     primeirosEventos.forEach(evento => {
-
       let dataEvento = new Date(evento.scheduled).toLocaleString()
 
       let html = `
@@ -32,6 +31,7 @@ async function mostrarEventos() {
   }
 }
 mostrarEventos()
+
 
 
 function redirecionar() {
@@ -75,7 +75,7 @@ async function fazerReservaIngresso() {
     })
 
     if (response.ok) {
-      alert('Reservado')
+      alert('reservado')
       redirecionar()
     } else {
       console.log(response)

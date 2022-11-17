@@ -17,9 +17,9 @@ async function verEventos() {
   <td>${atracoes}</td>
   <td>
   <a href="reservas.html?id=${evento._id}" class="btn btn-dark">ver reservas</a>
-  <a href="editar-evento.html?id=${evento._id}"  
+  <a href="editar-evento.html?id=${evento._id}" 
   id="editar-evento" class="btn btn-secondary">editar</a>
-  <a href="excluir-evento.html?id=${evento._id}" 
+  <a href="excluir-evento.html?id=${evento._id}"
   class="btn btn-danger">excluir</a>
   </td>
 </tr>

@@ -9,7 +9,7 @@ async function mostrarEventos() {
     const primeirosEventos = data.slice(0, 3)
 
     primeirosEventos.forEach(evento => {
-      // formato local
+
       let dataEvento = new Date(evento.scheduled).toLocaleString()
 
       let html = `
@@ -31,12 +31,9 @@ async function mostrarEventos() {
     console.log(error)
   }
 }
-// listar eventos dom
 mostrarEventos()
 
-// MODAL
 
-// redirecionar para pagina eventos
 function redirecionar() {
   window.location.href = 'index.html'
 }
@@ -49,7 +46,7 @@ function abrirModalIndex() {
   modal.setAttribute('id_evento', event.target.id)
 }
 
-// reserva ingresso onsubmit
+// reserva onsubmit
 
 const form = document.querySelector('#telaModalIndex form')
 form.addEventListener('submit', fazerReservaIngresso)
@@ -78,7 +75,7 @@ async function fazerReservaIngresso() {
     })
 
     if (response.ok) {
-      alert('reserva efetuada')
+      alert('Reservado')
       redirecionar()
     } else {
       console.log(response)
@@ -88,7 +85,7 @@ async function fazerReservaIngresso() {
     const result = await response.json()
     return result
   } catch (err) {
-    if (err.message === '400') alert('deu b.o pnc')
+    if (err.message === '400') alert('erro')
     console.log(err)
   }
 }

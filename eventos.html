@@ -17,12 +17,29 @@
             <img src="img/Sound-logo (1).png" width="300" alt="">
         </a>
     </header>
+
+    <form id="modal" class="hide">
+        <button id="exit-btn">Fechar</button><br>
+        
+        <label for="">Nome:<br>
+        <input type="text" id="name"></label><br>
+        
+        <label for="">Email:<br>
+        <input type="email" id="email"></label><br>
+        
+        <label for="">Ingressos:<br>
+        <input type="number" id="tickets"></label><br>
+        
+        <button type="submit" class="btn btn-primary btn-reserve">Concluir Reserva</button>
+    </form>
+
     <main>
         <section class="full">
             <div class="container text-center">
                 <h2>Todos os Eventos</h2>
             </div>
-            <div class="container d-flex justify-content-center align-items-center flex-wrap">
+            
+            <!-- <div class="container d-flex justify-content-center align-items-center flex-wrap">
                 <article class="evento card p-5 m-3">
                     <h2>nome do evento - 05/03/2022</h2>
                     <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
@@ -71,8 +88,9 @@
                         nobis in inventore tenetur asperiores.</p>
                     <a href="#" class="btn btn-primary">reservar ingresso</a>
                 </article>
-            </div>
+            </div> -->
         </section>
+
         <section class="full d-flex justify-content-center align-items-center"
             style="background-color: #f2f2f2; color: #555">
             <div class="container">

@@ -27,6 +27,8 @@ aside {
 .btn-primary {
     background-color: #C2185B;
     border-color: #C2185B;
+    color: #fff;
+    border-radius: .5rem;
 }
 
 main.login {
@@ -51,6 +53,7 @@ footer nav ul {
 footer nav ul li {
     padding: 10px;
 }
+
 
 
 .modal {
@@ -115,4 +118,58 @@ footer nav ul li {
     top: 5px;
     right: 10px;
     cursor: pointer;
+}
+
+/* Modal */
+
+#exit-btn{
+    font-size: .8rem;
+    background-color: #888;
+    color: #fff;
+    border: none;
+    border-radius: .25rem;
+    opacity: .9;
+    transition: .4s;
+    margin-bottom: 1rem;
+    margin-left: 87%;
+}
+
+#finish-btn{
+    background-color: #C2185B;
+    color: #fff;
+    border: none;
+    border-radius: .25rem;
+    opacity: .9;
+    transition: .4s;
+    margin-top: 1rem;
+    margin-left: 72%;
+}
+
+input{
+    width: 500px;
+    border-radius: .25rem;
+    border: .9px solid;
+    border-color: #777676;
+}
+
+#exit-btn:hover{
+    opacity: 1;
+}
+
+#finish-btn:hover{
+    opacity: 1;
+}
+
+#modal{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    background-color: #f8f8f8;
+    z-index: 10;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
 }

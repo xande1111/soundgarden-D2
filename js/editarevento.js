@@ -58,7 +58,8 @@ const editarEvento = async (evento) => {
     
     const resposta = await fetch(`https://xp41-soundgarden-api.herokuapp.com/events/${id}`, init )
     const dados = resposta.json()
-        
+    
+    location.replace('/admin.html');
 }
 
-btnEnviar.onclick = editarEvento;
+btnEnviar.onsubmit = editarEvento;

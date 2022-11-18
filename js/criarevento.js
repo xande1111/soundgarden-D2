@@ -1,4 +1,6 @@
 const btnEnviar = document.getElementById('btnSubmit')
+const popup = document.querySelector('.popup-wrapper')
+
 
 const novoEvento = async (evento) => {
 
@@ -30,7 +32,22 @@ const novoEvento = async (evento) => {
     
     const resposta = await fetch(`https://xp41-soundgarden-api.herokuapp.com/events`, init )
     const dados = resposta.json()
-        
+    
+    popup.style.display = 'block';
+
 }
 
-btnEnviar.onclick = novoEvento;
+btnEnviar.onsubmit = novoEvento;
+
+popup.addEventListener ('click', event => {
+    const classOfClickedElement = event.target.classList[0];
+    const classNames = ['popup-close', 'popup-wrapper'];
+    const shouldClosePopup = classNames.some(className => className === classOfClickedElement);
+
+    if (shouldClosePopup){
+        popup.style.display = 'none';
+
+    }
+
+    
+})

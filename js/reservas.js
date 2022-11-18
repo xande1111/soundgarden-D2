@@ -13,7 +13,7 @@ async function verEventos() {
     listaEventos.forEach((evento, index) => {
       let nomeDono = (evento.owner_name)
       let tickets = evento.number_tickets
-      
+
       let html = `
 <tr>
   <th scope="row">${index + 1}</th>

@@ -33,9 +33,8 @@ async function mostrarEventos() {
 mostrarEventos()
 
 
-
 function redirecionar() {
-  window.location.href = 'index.html'
+  window.location.href = 'admin.html'
 }
 
 const modal = document.querySelector('#telaModalIndex')
